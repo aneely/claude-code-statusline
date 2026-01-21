@@ -86,6 +86,12 @@ The cost is calculated using current API pricing (as of January 2025):
 
 This is an **estimate** and may not reflect your actual costs if you have different pricing or enterprise agreements.
 
+## Cursor CLI Support
+
+**⚠️ Status Line Not Supported in Cursor CLI**
+
+Unfortunately, Cursor CLI does not currently support status line configuration. This project was designed for Claude Code, which has built-in status line support.
+
 ## License
 
 MIT License - feel free to modify and distribute.
