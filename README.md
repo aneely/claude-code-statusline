@@ -4,19 +4,26 @@ A custom status line configuration for [Claude Code](https://github.com/anthropi
 
 ## What It Displays
 
-The status line shows real-time session information:
+The status line shows real-time session information in a robbyrussell-inspired format:
 
-1. **Model Name** (cyan) - Current Claude model in use
-2. **Output Style** (yellow) - Current output style (default/explanatory/concise)
-3. **Context Window Usage** (green) - Percentage used/remaining
-4. **Token Counts** (magenta) - Total input/output tokens
-5. **Estimated Cost** (red) - Session cost estimate based on API pricing
-6. **Vim Mode** (blue) - INSERT/NORMAL if vim mode is enabled
+1. **Directory Name** (cyan) - Basename of the current working directory
+2. **Git Branch & Status** (blue/red/yellow) - Branch name, dirty indicator if uncommitted changes
+3. **Model Name** (cyan) - Current Claude model in use
+4. **Output Style** (yellow) - Current output style (default/explanatory/concise)
+5. **Context Window Usage** (green) - Percentage used/remaining
+6. **Token Counts** (magenta) - Total input/output tokens
+7. **Estimated Cost** (red) - Session cost estimate based on API pricing
+8. **Vim Mode** (blue) - INSERT/NORMAL if vim mode is enabled
 
 ### Example Output
 
 ```
-Model: Sonnet 4.5 | Output Style: default | Context: 2.0% used (98.0% free) | Tokens: 4075 in / 766 out | Cost: $0.0234 | NORMAL
+my-project git:(main) | Model: Sonnet 4.6 | Style: default | Context: 2.0% used (98.0% free) | Tokens: 4075 in / 766 out | Cost: $0.0234
+```
+
+Dirty repo:
+```
+my-project git:(main) x | Model: Sonnet 4.6 | Style: default | Context: 5.1% used (94.9% free) | Tokens: 9823 in / 1204 out | Cost: $0.0476
 ```
 
 ## How It Works
